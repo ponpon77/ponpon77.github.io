@@ -1,0 +1,50 @@
+
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          
+          
+          
+          <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /><link href="https://fonts.googleapis.com/css2?family=Honk&family=Jacques+Francois+Shadow&family=Nabla:EDPT,EHLT@162,24&family=Rampart+One&family=Rubik+Glitch&display=swap" rel="stylesheet" /><link rel="stylesheet" type="text/css" href="unit1.css" />
+          
+          
+          
+        </head>
+        <body>
+          
+      <nav id="menu-bar">
+          <div class="menu-container">
+              <div class="site-name">
+                  K.Shirakawa
+              </div>
+              <ul class="menu-links">
+                  <li><a href="index.html">Home🏠</a></li>
+                  <li><a href="about.html">About Me📕</a></li>
+                  <li><a href="unit1.html">Ai chatbot🤖</a></li>
+                  <li><a href="unit2.html">Contacts☎️</a></li>
+              </ul>
+          </div>
+      </nav>
+      <div id="header">
+          <h1>AI Chat Bot🤖</h1>
+      </div>
+      <div id="about">
+          <h2>The AI chatbot</h2>
+          <p>Hi this is my ai chat bot(Chatgpt-4o). TRY IT OUT ITS DOWN THERE⬇️✅(It may take time for response)</p>
+          <h2>How it works❓</h2>
+          <p>First when the client input a prompt, the prompt is send to the java script changing the prompt to the jason format to sends to my global ip of my homes (180.220.89.146) port 5000. which is port forwarded to the raspberry pi local ip (192.168.000.119) port 5000.Then the raspbery pi will process the data in app.py (not much process to do, just adding the api to the json prompt) then sending the json prompt to azure.com the microsoft server that runs ai (this time I used open ai chatgpt-4o). Then the chatgpt gives back the message as response to the raspberry pi and then the website.</p>
+      </div>
+      <div id="chat"></div>
+      <div class="input-container">
+          <input type="text" id="userInput" placeholder="Type your message...">
+          <button onclick="sendMessage()">Send🛫</button>
+      </div>
+      
+      
+  
+          
+          <script src="script.js"></script><script type="text/javascript" src="aichatbot.js"></script>
+          
+        </body>
+      </html>
+    
