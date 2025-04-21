@@ -1,52 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
     <title>CA Robotics-Resource</title>
     <link rel="icon" type="image/x-icon" href="Logo_robot.png">
-    
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /><link href="https://fonts.googleapis.com/css2?family=Honk&family=Jacques+Francois+Shadow&family=Nabla:EDPT,EHLT@162,24&family=Rampart+One&family=Rubik+Glitch&display=swap" rel="stylesheet" /><link rel="stylesheet" type="text/css" href="style.css" />
-    
-    
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Jacques+Francois+Shadow&family=Nabla:EDPT,EHLT@162,24&family=Rampart+One&family=Rubik+Glitch&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      body {
+        font-family: 'Rubik Glitch', Arial, Helvetica, sans-serif;
+      }
+    </style>
   </head>
   <body>
-    
-<nav id="menu-bar">
-  <div class="menu-container">
-      <div class="site-name">
-        <img src="Logo.png" style="width: 30%;">
+    <nav id="menu-bar">
+      <div class="menu-container">
+        <div class="site-name">
+          <img src="Logo.png" alt="CA Robotics Club Logo" style="width: 30%;">
+        </div>
+        <ul class="menu-links">
+          <li><a href="index.html" aria-label="Home">Home <span aria-hidden="true">🏠</span></a></li>
+          <li><a href="about.html" aria-label="About">About <span aria-hidden="true">📕</span></a></li>
+          <li><a href="resourceLibrary.html" aria-label="Resource Library">Resource Library <span aria-hidden="true">🤖</span></a></li>
+          <li><a href="contacts.html" aria-label="Contacts">Contacts <span aria-hidden="true">☎️</span></a></li>
+        </ul>
       </div>
-      <ul class="menu-links">
-          <li><a href="index.html">Home🏠</a></li>
-          <li><a href="about.html">About📕</a></li>
-          <li><a href="resourceLibrary.html">Resource Library🤖</a></li>
-          <li><a href="contacts.html">Contacts☎️</a></li>
-
-      </ul>
-  </div>
-</nav>
+    </nav>
+    <main>
       <div id="header">
-          <h1>AI Chat Bot🤖</h1>
+        <h1>AI Chat Bot <span aria-hidden="true">🤖</span></h1>
       </div>
-      <div id="about">
-          <h2>The A chatbot</h2>
-          <p>Hi this is my ai chat bot(Chatgpt-4o). TRY IT OUT ITS DOWN THERE⬇️✅(It may take time for response)</p>
-          <h2>How it works❓</h2>
-          <p>First when the client input a prompt, the prompt is send to the java script changing the prompt to the jason format to sends to my global ip of my homes (180.220.89.146) port 5000. which is port forwarded to the raspberry pi local ip (192.168.000.119) port 5000.Then the raspbery pi will process the data in app.py (not much process to do, just adding the api to the json prompt) then sending the json prompt to azure.com the microsoft server that runs ai (this time I used open ai chatgpt-4o). Then the chatgpt gives back the message as response to the raspberry pi and then the website.</p>
-      </div>
-      <div id="chat"></div>
-      <div class="input-container">
-          <input type="text" id="userInput" placeholder="Type your message...">
-          <button onclick="sendMessage()">Send🛫</button>
-      </div>
-      
-      
-  
-          
-          <script src="script.js"></script><script type="text/javascript" src="aichatbot.js"></script>
-          
-        </body>
-      </html>
-    
+      <section id="about">
+        <h2>The AI Chatbot</h2>
+        <p>Hi, this is my AI chatbot (ChatGPT-4o). Try it out below. <span aria-hidden="true">⬇️✅</span> (It may take time for a response.)</p>
+        <h2>How it works <span aria-hidden="true">❓</span></h2>
+        <p>
+          When you enter a prompt, it is sent to JavaScript, which formats it as JSON and sends it to my home's global IP address (180.220.89.146) on port 5000. This is port forwarded to a Raspberry Pi on the local network (192.168.0.119) at port 5000. The Raspberry Pi processes the data in <code>app.py</code> (mainly adding the API key to the JSON prompt) and then sends it to Azure (Microsoft's server running OpenAI ChatGPT-4o). ChatGPT returns a response, which is relayed back to the website.
+        </p>
+      </section>
+      <section id="chatbot">
+        <div id="chat" aria-live="polite"></div>
+        <form class="input-container" onsubmit="sendMessage(); return false;">
+          <label for="userInput" class="visually-hidden">Type your message</label>
+          <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off">
+          <button type="submit">Send <span aria-hidden="true">🛫</span></button>
+        </form>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="aichatbot.js"></script>
+    <style>
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        border: 0;
+      }
+    </style>
+  </body>
+</html>
