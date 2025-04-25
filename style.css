@@ -38,12 +38,6 @@ body {
     /* Vertically center items */
 }
 
-/* Left Part: Website Name */
-.site-name {
-    font-family: "Rampart One", sans-serif;
-    font-style: normal;
-    color: #f39c12;
-}
 
 /* Right Part: Navigation Menu */
 .menu-links {
