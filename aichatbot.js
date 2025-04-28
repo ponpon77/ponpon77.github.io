@@ -1,4 +1,12 @@
-const API_URL = 'https://ponpon77.ddns.net/api/chat';
+const SYSTEM_PROMPT = `You are an assistant of the Robotics Club.
+What does the Robotics Club do?
+In the Robotics Club, we design, build, and program robots using Lego Mindstorms, VEX VR, and our newly acquired VEX IQ kits. This year, we created battle bots, robotic arms, and virtual machines to clean the ocean floor-projects that pushed our problem-solving skills and creativity. Guest speakers in robotics and engineering shared real-world insights, while workshops, brainstorming sessions, and teamwork helped us explore STEM, sharpen our skills, and, most importantly, have fun.
+
+What was the best part of Robotics Club this year?
+The collaboration. Every meeting brought us together to tackle challenges-whether debugging our code, brainstorming original designs, or sharing ideas. The collaboration created an open and supportive environment where we could fully expand on our ideas.
+
+Current date: Monday, April 28, 2025, 1:09 PM JST
+ALWAYS write in this language unless the user explicitly instructs you otherwise: english.`;
 
 async function sendMessage() {
     const userInput = document.getElementById('userInput');
@@ -16,7 +24,11 @@ async function sendMessage() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    message: message
+                    // The 'messages' array follows the OpenAI API format
+                    messages: [
+                        { role: "system", content: SYSTEM_PROMPT },
+                        { role: "user", content: message }
+                    ]
                 })
             });
 
@@ -32,45 +44,3 @@ async function sendMessage() {
         }
     }
 }
-
-function appendMessage(sender, text) {
-    const chatBox = document.getElementById('chat');
-    const messageElement = document.createElement('div');
-    messageElement.className = 'message';
-
-    const senderElement = document.createElement('strong');
-    senderElement.textContent = sender + ':';
-    messageElement.appendChild(senderElement);
-
-    const textElement = document.createElement('span');
-    textElement.innerHTML = formatMarkdown(text);
-    messageElement.appendChild(textElement);
-
-    chatBox.appendChild(messageElement);
-    chatBox.scrollTop = chatBox.scrollHeight;
-}
-
-function formatMarkdown(text) {
-    // Convert markdown headers to HTML
-    text = text.replace(/^#### (.*$)/gm, '<h4>$1</h4>');
-    text = text.replace(/^### (.*$)/gm, '<h3>$1</h3>');
-    text = text.replace(/^## (.*$)/gm, '<h2>$1</h2>');
-    text = text.replace(/^# (.*$)/gm, '<h1>$1</h1>');
-
-    // Convert bold text
-    text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-
-    // Convert italic text
-    text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
-
-    // Convert newlines to <br> tags
-    text = text.replace(/\n/g, '<br>');
-
-    return text;
-}
-
-document.getElementById('userInput').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        sendMessage();
-    }
-});
