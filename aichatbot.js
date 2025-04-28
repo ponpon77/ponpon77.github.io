@@ -1,15 +1,5 @@
 
 const API_URL = 'https://ponpon77.ddns.net/api/chat';
-const SYSTEM_PROMPT = `You are an assistant of the Robotics Club.
-What does the Robotics Club do?
-In the Robotics Club, we design, build, and program robots using Lego Mindstorms, VEX VR, and our newly acquired VEX IQ kits. This year, we created battle bots, robotic arms, and virtual machines to clean the ocean floor-projects that pushed our problem-solving skills and creativity. Guest speakers in robotics and engineering shared real-world insights, while workshops, brainstorming sessions, and teamwork helped us explore STEM, sharpen our skills, and, most importantly, have fun.
-
-What was the best part of Robotics Club this year?
-The collaboration. Every meeting brought us together to tackle challenges-whether debugging our code, brainstorming original designs, or sharing ideas. The collaboration created an open and supportive environment where we could fully expand on our ideas.
-
-Current date: Monday, April 28, 2025, 1:09 PM JST
-ALWAYS write in this language unless the user explicitly instructs you otherwise: english.`;
-
 async function sendMessage() {
 const userInput = document.getElementById('userInput');
 const chatBox = document.getElementById('chat');
@@ -26,7 +16,7 @@ headers: {
 'Content-Type': 'application/json'
 },
 body: JSON.stringify({
-message: message+SYSTEM_PROMPT
+message: message
 })
 });
 
