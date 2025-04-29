@@ -37,6 +37,7 @@ body {
     padding: 0;
     display: flex;
     gap: 20px;
+    color: #98FF5A;
 }
 
 .menu-links li a {
@@ -51,9 +52,7 @@ body {
 
 .menu-links li a:hover {
     background-color: #9CB0D9;
-    /* highlight on hover */
     color: #333;
-    /* Dark text when hovered */
 }
 
 
