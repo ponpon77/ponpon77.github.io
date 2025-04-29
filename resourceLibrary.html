@@ -27,12 +27,12 @@
     </nav>
     <main>
       <div id="header">
-        <h1>AI Chat Bot <span aria-hidden="true">🤖</span></h1>
+        <h1>AI Chat Bot </h1>
       </div>
       <section id="about">
         <h2>The AI Chatbot</h2>
-        <p>Hi, this is my AI chatbot (ChatGPT-4o). Try it out below. <span aria-hidden="true">⬇️✅</span> (It may take time for a response.)</p>
-        <h2>How it works <span aria-hidden="true">❓</span></h2>
+        <p>Hi, this is my AI chatbot (ChatGPT-4o). Try it out below.(It may take time for a response.)</p>
+        <h2>How it works </h2>
         <p>
           When you enter a prompt, it is sent to JavaScript, which formats it as JSON and sends it to my home's global IP address (180.220.89.146) on port 5000. This is port forwarded to a Raspberry Pi on the local network (192.168.0.119) at port 5000. The Raspberry Pi processes the data in <code>app.py</code> (mainly adding the API key to the JSON prompt) and then sends it to Azure (Microsoft's server running OpenAI ChatGPT-4o). ChatGPT returns a response, which is relayed back to the website.
         </p>
