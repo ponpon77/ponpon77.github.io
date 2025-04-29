@@ -26,36 +26,27 @@ body {
 /* Flexbox Container for Menu */
 .menu-container {
     display: flex;
-    /* Align items horizontally */
     justify-content: space-between;
-    /* Space between the website name and menu links */
     align-items: center;
-    /* Vertically center items */
 }
 
 
-/* Right Part: Navigation Menu */
 .menu-links {
     list-style: none;
-    /* Remove default list styles */
     margin: 0;
     padding: 0;
     display: flex;
-    /* Display links horizontally */
     gap: 20px;
-    /* Space between menu links */
 }
 
 .menu-links li a {
     position: relative;
     text-decoration: none;
-    /* Remove underlines */
     font-size: 30px;
+    color: #98FF5A;
     padding: 10px 15px;
     transition: all 0.3s ease;
-    /* Smooth hover effect */
     border-radius: 4px;
-    /* Slightly rounded corners for better feel */
 }
 
 .menu-links li a:hover {
