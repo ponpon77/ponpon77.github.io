@@ -1,4 +1,4 @@
-/* General Reset */
+
 body {
     margin: 0;
     padding: 0;
@@ -18,14 +18,9 @@ body {
     /* Fix the navbar at the top */
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: "Honk", system-ui;
-    font-optical-sizing: auto;
-    font-weight: 800;
+    font-family: "Iceberg", sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-        "MORF" 15,
-        "SHLN" 50;
-    font-size: 35px;
 }
 
 /* Flexbox Container for Menu */
