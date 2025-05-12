@@ -27,37 +27,14 @@
     </nav>
     <main>
       <div id="header">
-        <h1>AI Chat Bot </h1>
+        <h1>Useful links</h1>
       </div>
       <section id="about">
-        <h2>The AI Chatbot</h2>
-        <p>Hi, this is my AI chatbot (ChatGPT-4o). Try it out below.(It may take time for a response.)</p>
-        <h2>How it works </h2>
-        <p>
-          When you enter a prompt, it is sent to JavaScript, which formats it as JSON and sends it to my home's global IP address (180.220.89.146) on port 5000. This is port forwarded to a Raspberry Pi on the local network (192.168.0.119) at port 5000. The Raspberry Pi processes the data in <code>app.py</code> (mainly adding the API key to the JSON prompt) and then sends it to Azure (Microsoft's server running OpenAI ChatGPT-4o). ChatGPT returns a response, which is relayed back to the website.
-        </p>
-      </section>
-      <section id="chatbot">
-        <div id="chat" aria-live="polite"></div>
-        <form class="input-container" onsubmit="sendMessage(); return false;">
-          <label for="userInput" class="visually-hidden">Type your message</label>
-          <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off">
-          <button type="submit">Send <span aria-hidden="true">🛫</span></button>
-        </form>
+          <li><a href="https://www.vexrobotics.com/iq?srsltid=AfmBOorfJ9LSxtBXD1llh-M3UG9rREaEYEEUiEhwah8Abu1bxqCMiPqu">Vex IQ home</a></li>
+          <li><a href="https://vexjapan.com/products/vexiq/">Vex IQ Product Page</a></li>
+          <li><a href="https://codeiq.vex.com">Vex IQ coding</a></li>
+          <li><a href="https://recf.org/teams/competition/vex-iq-robotics-competition/">Rapid Relay</a></li>
       </section>
     </main>
-    <script type="text/javascript" src="aichatbot.js"></script>
-    <style>
-      .visually-hidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        border: 0;
-      }
-    </style>
   </body>
 </html>
