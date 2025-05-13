@@ -113,6 +113,7 @@ button {
     margin-bottom: 20px;
 }
 
+/* おしゃれなリンクリスト */
 .links {
   list-style: none;
   padding: 0;
@@ -152,12 +153,12 @@ button {
   box-shadow: 0 4px 16px rgba(156, 176, 217, 0.25);
 }
 
-.fancy-links .link-arrow {
+.links .link-arrow {
   font-size: 1.3em;
   margin-left: auto;
   transition: transform 0.2s;
 }
 
-.fancy-links a:hover .link-arrow {
+.links a:hover .link-arrow {
   transform: translateX(4px) scale(1.2);
 }
