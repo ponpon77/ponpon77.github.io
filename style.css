@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -7,15 +6,13 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Navigation Bar */
+
 #menu-bar {
     background-color: #333;
-    /* Dark background */
     color: white;
     padding: 15px 30px;
     position: sticky;
     top: 0;
-    /* Fix the navbar at the top */
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: "Iceberg", sans-serif;
@@ -23,7 +20,7 @@ body {
     font-style: normal;
 }
 
-/* Flexbox Container for Menu */
+
 .menu-container {
     display: flex;
     justify-content: space-between;
@@ -56,7 +53,7 @@ body {
 }
 
 
-/* Header Section */
+
 #header {
     text-align: center;
     padding: 50px 20px;
@@ -69,7 +66,7 @@ body {
 }
 
 
-/* About Section */
+
 #about {
     padding: 50px 20px;
     text-align: center;
@@ -101,7 +98,7 @@ body {
     margin-right: 10px;
     margin-bottom: 20px;
 }
-    
+
 button {
     width: 70px;
     padding: 5px 10px;
@@ -115,50 +112,50 @@ button {
 
 
 .links {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 400px;
-  text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: left;
 }
 
 .links li {
-  margin: 18px 0;
-  transition: transform 0.2s;
+    margin: 18px 0;
+    transition: transform 0.2s;
 }
 
 .links li:hover {
-  transform: translateX(8px) scale(1.02);
+    transform: translateX(8px) scale(1.02);
 }
 
 .links a {
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-  background: #fff;
-  color: #333;
-  padding: 14px 18px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(156, 176, 217, 0.15);
-  text-decoration: none;
-  font-family: 'Iceberg', sans-serif;
-  font-weight: 500;
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    background: #fff;
+    color: #333;
+    padding: 14px 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(156, 176, 217, 0.15);
+    text-decoration: none;
+    font-family: 'Iceberg', sans-serif;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    gap: 10px;
 }
 
 .links a:hover {
-  background: linear-gradient(90deg, #98FF5A 0%, #9CB0D9 100%);
-  color: #222;
-  box-shadow: 0 4px 16px rgba(156, 176, 217, 0.25);
+    background: linear-gradient(90deg, #98FF5A 0%, #9CB0D9 100%);
+    color: #222;
+    box-shadow: 0 4px 16px rgba(156, 176, 217, 0.25);
 }
 
 .links .link-arrow {
-  font-size: 1.3em;
-  margin-left: auto;
-  transition: transform 0.2s;
+    font-size: 1.3em;
+    margin-left: auto;
+    transition: transform 0.2s;
 }
 
 .links a:hover .link-arrow {
-  transform: translateX(4px) scale(1.2);
+    transform: translateX(4px) scale(1.2);
 }
