@@ -113,7 +113,7 @@ button {
     margin-bottom: 20px;
 }
 
-.fancy-links {
+.links {
   list-style: none;
   padding: 0;
   margin: 0 auto;
@@ -121,16 +121,16 @@ button {
   text-align: left;
 }
 
-.fancy-links li {
+.links li {
   margin: 18px 0;
   transition: transform 0.2s;
 }
 
-.fancy-links li:hover {
+.links li:hover {
   transform: translateX(8px) scale(1.02);
 }
 
-.fancy-links a {
+.links a {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
@@ -146,18 +146,18 @@ button {
   gap: 10px;
 }
 
-.fancy-links a:hover {
+.links a:hover {
   background: linear-gradient(90deg, #98FF5A 0%, #9CB0D9 100%);
   color: #222;
   box-shadow: 0 4px 16px rgba(156, 176, 217, 0.25);
 }
 
-.fancy-links .link-arrow {
+.links .link-arrow {
   font-size: 1.3em;
   margin-left: auto;
   transition: transform 0.2s;
 }
 
-.fancy-links a:hover .link-arrow {
+.links a:hover .link-arrow {
   transform: translateX(4px) scale(1.2);
 }
