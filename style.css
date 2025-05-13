@@ -113,5 +113,51 @@ button {
     margin-bottom: 20px;
 }
 
+.fancy-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: left;
+}
 
-    
+.fancy-links li {
+  margin: 18px 0;
+  transition: transform 0.2s;
+}
+
+.fancy-links li:hover {
+  transform: translateX(8px) scale(1.02);
+}
+
+.fancy-links a {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  background: #fff;
+  color: #333;
+  padding: 14px 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(156, 176, 217, 0.15);
+  text-decoration: none;
+  font-family: 'Iceberg', sans-serif;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  gap: 10px;
+}
+
+.fancy-links a:hover {
+  background: linear-gradient(90deg, #98FF5A 0%, #9CB0D9 100%);
+  color: #222;
+  box-shadow: 0 4px 16px rgba(156, 176, 217, 0.25);
+}
+
+.fancy-links .link-arrow {
+  font-size: 1.3em;
+  margin-left: auto;
+  transition: transform 0.2s;
+}
+
+.fancy-links a:hover .link-arrow {
+  transform: translateX(4px) scale(1.2);
+}
