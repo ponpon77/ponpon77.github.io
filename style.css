@@ -119,12 +119,11 @@ button {
   margin: 0 auto;
   max-width: 400px;
   text-align: left;
-}
-
-.links li {
   margin: 18px 0;
   transition: transform 0.2s;
 }
+
+
 
 .links li:hover {
   transform: translateX(8px) scale(1.02);
